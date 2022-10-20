@@ -5,7 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var gundamRouter = require('./routes/gundam.js');
+
+var mongoose = require('mongoose')
+var db = "mongodb://localhost:27017/toystore";
+//var db = 'mongodb+srv://admin:admin@cluster0.nrru4jv.mongodb.net/greenwich'
+mongoose.connect(db, { useNewUrlParser: true})
 
 var app = express();
 
@@ -20,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/gundam', gundamRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +42,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const port = process.env.PORT || 7000
+app.listen(port, () => {
+  console.log("http://localhost:7000")
+})
 
 module.exports = app;
