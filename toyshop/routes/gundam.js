@@ -10,4 +10,13 @@ router.get('/', (req, res) => {
         }
     })
 })
+
+
+router.get('/list', (req, res) => {
+    GundamModel.find((err, data) => {
+        if(!err){
+            res.render('gundam/list', {gundam: data})
+        }
+    })
+})
 module.exports = router

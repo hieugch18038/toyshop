@@ -1,6 +1,7 @@
 <table class="table table-bordered bg-light mt-3 mb-3 text-center">
     <tr>
         <th class="text-primary">Gundam list</th>
+        <th></th>
         <th>
             <a class="btn btn-success">Add</a>
         </th>
@@ -12,8 +13,20 @@
         <th>Age</th>
         <th>Made in</th>
         <th>Image</th>
+        <th>Option</th>
     </tr>
-
+    <div class="card">
+        <div class="card-header">
+            Header
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+        <div class="card-footer text-muted">
+            Footer
+        </div>
+    </div>
     {{#each gundams}}
     <tr>
         <th>{{name}}</th>
@@ -22,6 +35,10 @@
         <th>{{age_require}}</th>
         <th>{{made_in}}</th>
         <th><img src="{{image}}" width="100" height="100"></th>
+        <th>
+            <a class="btn btn-warning" href="/gundam/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/gundam/delete/{{_id}}">delete</a>
+        </th>
     </tr>
     {{/each}}
 </table>
