@@ -6,7 +6,7 @@ var GundamSchema = new schema(
         name: String,
         brand: String,
         grade: String,
-        age_require: Number,
+        price: Number,
         made_in: String,
         image: String
     },
