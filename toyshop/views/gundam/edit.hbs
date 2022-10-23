@@ -1,0 +1,25 @@
+<form action="/gundam/edit/{{gundam._id}}" method="post" class="card p-3 bg-warning text-center">
+   <h2 class="text text-primary">Edit Product info</h2>
+   <div class="form-group">
+      <label class="text-danger h6">Product Name<a><input class="form-control" type="text" name="name" value="{{gundam.name}}"></a></label>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-danger h6">Brand<a><input class="form-control" type="text" name="brand" value="{{gundam.brand}}" ></a></label>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-danger h6">Grade<a><input class="form-control" type="text" name="grade" value="{{gundam.grade}}"></a></label>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-danger h6">Image<a><input class="form-control" type="text" name="image" value="{{gundam.image}}"></a></label><br>
+      <img src="{{gundam.image}}" width="120" height="100">
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-danger h6">Made in<a><input class="form-control" type="text" name="made_in" value="{{gundam.made_in}}"></a></label>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-danger h6">Price<a><input class="form-control" type="text" name="price" value="{{gundam.price}}"></a></label>
+   </div>
+   <div class="form-group mt-3">
+      <input class="btn btn-success mt-3" type="submit" value="Add">
+   </div>
+</form>

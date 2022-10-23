@@ -27,7 +27,7 @@ router.get('/delete/:id', (req, res) => {
         console.log("delete success");
 
         // redirect ve trang /gundam(index)
-        res.redirect("/gundam/index")
+        res.redirect("/gundam")
       }
     })
   })
@@ -42,7 +42,7 @@ router.get('/delete/:id', (req, res) => {
     gundam.save((err) => {
       if (!err) {
         console.log("Add success")
-        res.redirect("/gundam/index")
+        res.redirect("/gundam")
       }
     })
   })
@@ -63,7 +63,7 @@ router.get('/delete/:id', (req, res) => {
     GundamModel.findByIdAndUpdate(req.params.id, req.body, (err) => {
       if (!err) {
         console.log ("Update success")
-        res.redirect("/gundam/index")
+        res.redirect("/gundam")
       }
     })
   })
@@ -77,6 +77,7 @@ router.get('/delete/:id', (req, res) => {
         }
     })
   })
+
 router.get('/list', (req, res) => {
     GundamModel.find((err, data) => {
         if(!err){
@@ -84,4 +85,13 @@ router.get('/list', (req, res) => {
         }
     })
 })
+router.post('/searchli', (req, res) => {
+  console.log("test Search list")
+  GundamModel.find({ name: new RegExp(req.body.name, "i") }, (err, data) => {
+      if (!err) {
+          res.render('gundam/list', { gundams: data })
+      }
+  })
+})
+
 module.exports = router
