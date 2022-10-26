@@ -1,4 +1,3 @@
-<div>bs5-card-group</div>
 <div class="card-group text-center">
     <tr>
         <th colspan="1">
@@ -11,14 +10,13 @@
     </tr>
     <div class="row">
         {{#each gundam}}
-        <div class="card col-md-3 m-3" >
-
-            <a href="/gundam/detail/{{_id}}"><img class="card-img-top" src="{{image}}" width="150" height="300"></a>
+        <div class="card col-md-3 m-3 bg-warning" >
             <div class="card-body">
                 <h4 class="card-title" >{{name}}</h4>
                 <p class="card-text">{{brand}}</p>
                 <h3 class="card-title text-danger">{{price}}$</h3>
             </div>
+            <a href="/gundam/detail/{{_id}}"><img class="card-img-top" src="{{image}}" width="150" height="300"></a>
         </div>
         {{/each}}
     </div>

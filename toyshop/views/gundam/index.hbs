@@ -1,10 +1,10 @@
-<table class="table table-bordered bg-light mt-3 mb-3 text-center">
+<table class="table table-bordered table-info bg-light mt-3 mb-3 text-center">
     <tr><a class="btn btn-success" href="/gundam/add">Add Product</a></tr>
     <tr>
-        <th colspan="1">
+        <th colspan="7">
             <form action="/gundam/search" method="post">
                 <div class="form-group">
-                    <input class="form-control" type="search" name="name" placeholder="Search by name">
+                    <input class="form-control" type="search" name="name" placeholder="Search product">
                 </div>
             </form>
         </th>
@@ -28,8 +28,8 @@
         <th>{{made_in}}</th>
         <th><a href="/gundam/detail/{{_id}}"><img src="{{image}}" width="100" height="100"></a></th>
         <th>
-            <a class="btn btn-warning" href="/gundam/edit/{{_id}}">Edit</a>
-            <a class="btn btn-danger" href="/gundam/delete/{{_id}}">delete</a>
+            <a class="btn btn-success" href="/gundam/edit/{{_id}}">Update</a>
+            <a class="btn btn-danger" href="/gundam/delete/{{_id}}">Remove</a>
         </th>
     </tr>
     {{/each}}
