@@ -89,7 +89,7 @@ router.post('/searchli', (req, res) => {
   console.log("test Search list")
   GundamModel.find({ name: new RegExp(req.body.name, "i") }, (err, data) => {
       if (!err) {
-          res.render('gundam/list', { gundams: data })
+          res.render('gundam/list', { gundam: data })
       }
   })
 })
