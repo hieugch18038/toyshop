@@ -12,14 +12,14 @@ header {
   font-size: 35px;
   color: white;
 }
-div{
+div#div2{
   float: left;
   padding: 20px;
   width: 70%;
 }
 nav {
   float: left;
-  width: 15%;
+  width: 10%;
   background: #ccc;
   padding: 20px;
 }
