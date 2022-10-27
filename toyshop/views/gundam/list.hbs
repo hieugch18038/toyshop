@@ -8,9 +8,9 @@
             </form>
         </th>
     </tr>
-    <div class="row">
+    <li class="row">
         {{#each gundam}}
-        <div class="card col-md-3 m-5 bg-warning" >
+        <div class="card col-md-4 m-5 bg-warning" >
             <div class="card-body">
                 <h4 class="card-title" >{{name}}</h4>
                 <p class="card-text">{{brand}}</p>
@@ -19,6 +19,6 @@
             <a href="/gundam/detail/{{_id}}"><img class="card-img-top" src="{{image}}" width="150" height="300"></a>
         </div>
         {{/each}}
-    </div>
+    </li>
 
 </div>

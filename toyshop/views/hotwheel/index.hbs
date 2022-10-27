@@ -1,34 +1,36 @@
-<table class="table table-bordered table-info bg-light mt-3 mb-3 text-center">
-    <tr><a class="btn btn-success" href="/hotwheel/add">Add Product</a></tr>
-    <tr>
-        <th colspan="7">
-            <form action="/hotwheel/search" method="post">
-                <div class="form-group">
-                    <input class="form-control" type="search" name="name" placeholder="Search product">
-                </div>
-            </form>
-        </th>
-    </tr>
-    <tr>
-        <th>Name</th>
-        <th>Seri</th>
-        <th>Price</th>
-        <th>Made in</th>
-        <th>Image</th>
-        <th>Option</th>
-    </tr>
-    
-    {{#each hotwheels}}
-    <tr>
-        <th>{{name}}</th>
-        <th>{{seri}}</th>
-        <th>{{price}}$</th>
-        <th>{{made_in}}</th>
-        <th><a href="/hotwheel/detail/{{_id}}"><img src="{{image}}" width="100" height="100"></a></th>
-        <th>
-            <a class="btn btn-success" href="/hotwheel/edit/{{_id}}">Update</a>
-            <a class="btn btn-danger" href="/hotwheel/delete/{{_id}}">Remove</a>
-        </th>
-    </tr>
-    {{/each}}
-</table>
+<div>
+    <table class="table table-bordered table-info bg-light mt-3 mb-3 text-center">
+        <tr><a class="btn btn-success" href="/hotwheel/add">Add Product</a></tr>
+        <tr>
+            <th colspan="7">
+                <form action="/hotwheel/search" method="post">
+                    <div class="form-group">
+                        <input class="form-control" type="search" name="name" placeholder="Search product">
+                    </div>
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Seri</th>
+            <th>Price</th>
+            <th>Made in</th>
+            <th>Image</th>
+            <th>Option</th>
+        </tr>
+        
+        {{#each hotwheels}}
+        <tr>
+            <th>{{name}}</th>
+            <th>{{seri}}</th>
+            <th>{{price}}$</th>
+            <th>{{made_in}}</th>
+            <th><a href="/hotwheel/detail/{{_id}}"><img src="{{image}}" width="100" height="100"></a></th>
+            <th>
+                <a class="btn btn-success" href="/hotwheel/edit/{{_id}}">Update</a>
+                <a class="btn btn-danger" href="/hotwheel/delete/{{_id}}">Remove</a>
+            </th>
+        </tr>
+        {{/each}}
+    </table>
+</div>
