@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var gundamRouter = require('./routes/gundam.js');
+var hotwheelRouter = require('./routes/hotwheel.js');
+
 
 var mongoose = require('mongoose')
 var db = "mongodb://localhost:27017/toystore";
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/gundam', gundamRouter);
+app.use('/hotwheel', hotwheelRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
