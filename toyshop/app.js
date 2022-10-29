@@ -10,9 +10,12 @@ var hotwheelRouter = require('./routes/hotwheel.js');
 
 
 var mongoose = require('mongoose')
-//var db = "mongodb://localhost:27017/toystore";
-var db = 'mongodb+srv://admin:admin@cluster0.nrru4jv.mongodb.net/toystore'
+var db = "mongodb://localhost:27017/toystore";
+//var db = 'mongodb+srv://admin:admin@cluster0.nrru4jv.mongodb.net/toystore'
 mongoose.connect(db, { useNewUrlParser: true})
+
+var hbs = require('hbs')
+hbs.registerHelper('equal', require('handlebars-helper-equal'))
 
 var app = express();
 
